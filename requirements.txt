@@ -3,7 +3,7 @@ certifi==2019.3.9
 cffi==1.12.3
 chardet==3.0.4
 cryptography==2.7
-Django==2.2.3
+django>=2.2.4
 django-crispy-forms==1.7.2
 emoji==0.5.2
 geographiclib==1.49
