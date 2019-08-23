@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Export Data</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <form action="#" method="post">
+            {% csrf_token %}
+
+            <h2>Export Data: </h2>
+            {% for f in DataExportForm %}
+                {{ f.label_tag }} {{ f }}<br>
+            {% endfor %}
+
+            <input type="submit" value="Export Data">
+        </form>
+
+        <a href="{% url 'index' %}">Return To Index Page</a>
+    </div>
+</body>
+</html>

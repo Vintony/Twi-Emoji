@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Crawler</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <form action="#" method="post">
+            {% csrf_token %}
+
+            <h2>Create Search Crawler: </h2>
+            {% for f in SearchCrawlerForm %}
+                {{ f.label_tag }} {{ f }}<br>
+            {% endfor %}
+
+            <h2>Create Crawler Rule(Optional): </h2>
+            {% for f in CrawlerRuleDefinerForm %}
+                {{ f.label_tag }} {{ f }}<br>
+            {% endfor %}
+
+            <input type="submit" value="Crawling!">
+        </form>
+
+        <a href="{% url 'index' %}">Return To Index Page</a>
+    </div>
+</body>
+</html>

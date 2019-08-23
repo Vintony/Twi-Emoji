@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Report</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <form action="#" method="post">
+            {% csrf_token %}
+
+            <h2>Create Report: </h2>
+            {% for f in ReportCreaterForm %}
+                {{ f.label_tag }} {{ f }}<br>
+            {% endfor %}
+
+            <input type="submit" value="Create Report">
+        </form>
+
+        <a href="{% url 'index' %}">Return To Index Page</a>
+    </div>
+</body>
+</html>

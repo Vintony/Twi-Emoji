@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div style="text-align: center">
+    <label>{{ tweets_count }} Tweets have been included in this report</label><br>
+    <label>{{ tweets_emoji_count }} Tweets contain emojis</label><br>
+    <label>{{ tweets_hashtag_count }} Tweets contain hashtags</label><br>
+    <label>{{ tweets_emoji }} Emoji-Tweets'id</label><br>
+    <label>{{ tweets_hashtag }} Hashtag-Tweets'id</label><br>
+    <a href="{% url 'index' %}">Return To Index Page</a><br>
+</div>
+</body>
+</html>
